@@ -1,0 +1,53 @@
+.registerAccountTypes h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.9rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+
+.registerAccountContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 11.5rem;
+}
+
+.registerAccountContainer a {
+  width: 36.7rem;
+  height: 23rem;
+  border: 0.4rem solid black;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.registerAccountContainer a:hover {
+  background-color: #fff;
+}
+
+.registerAccountContainer img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.registerAccountContainer h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+
+.registerAccountContainer p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0em;
+  color: #393939;
+  width: 30.8rem;
+}

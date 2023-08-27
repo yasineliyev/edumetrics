@@ -1,0 +1,95 @@
+.register {
+  margin-top: 1.4rem;
+}
+
+.scrollToTop {
+  background-color: #5f56a5 !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  transition: all 0.3s ease;
+}
+
+.scrollToTop svg {
+  fill: black;
+}
+
+.scrollToTop:hover svg,
+.scrollToTop:focus svg {
+  fill: #fff;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus {
+  background-color: #5f56a5d2 !important;
+}
+
+.registerTop {
+  display: flex;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.registerTopLeft {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.registerTopLeft h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6.2rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.registerTopLeft p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 3.5rem 0;
+}
+
+.registerTopRight {
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.ellipseContainer {
+  width: 30.6rem;
+  height: 30.6rem;
+  margin-left: auto;
+  position: relative;
+}
+
+.ellipseContainer img {
+  position: absolute;
+}
+
+.bigEllipse {
+  width: 100%;
+  height: 100%;
+}
+
+.greenEllipse {
+  width: 5.6rem;
+  height: 5.6rem;
+  right: 4rem;
+}
+
+.littleOrangeEllipse {
+  width: 7.1rem;
+  height: 7.1rem;
+  top: 1rem;
+  left: 1rem;
+}
+
+.littleBlueEllipse {
+  width: 3.3rem;
+  height: 3.3rem;
+  bottom: 0;
+  left: 7rem;
+}

@@ -1,0 +1,851 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #4ae49d;
+  gap: 2.5rem;
+}
+
+.loading h2 {
+  font-size: 4rem;
+  letter-spacing: 1px;
+}
+
+.loading img {
+  width: 8rem;
+  height: 8rem;
+  animation: spin 5s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home {
+  margin-top: 1.4rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactLeft h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6.2rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.contactLeft h1 span {
+  color: #4ae49d;
+}
+
+.contactLeft p {
+  font-weight: 400;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 3.5rem 0;
+}
+
+.contactRight {
+  width: 100%;
+  height: 56.6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactRight .bigEllipse {
+  width: 100%;
+  height: 100%;
+}
+
+.contactRight img {
+  position: absolute;
+}
+
+.pupilImg {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: -1rem;
+}
+
+.greenEllipse {
+  right: 1rem;
+  top: 11rem;
+}
+
+.littleBlueEllipse {
+  bottom: 5rem;
+  left: 8rem;
+}
+
+.exams {
+  margin-top: 13rem;
+}
+
+.exams h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 6rem;
+  letter-spacing: 0em;
+}
+
+.greenEllipse2 {
+  position: absolute;
+  top: 69rem;
+  right: 50rem;
+}
+
+.examsBoxContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 6.5rem;
+}
+
+.examsBoxContainer a {
+  width: 38rem;
+  height: 38.2rem;
+  padding: 2.8rem;
+}
+
+.examsBoxContainer a:first-child {
+  background-color: #ffa753;
+}
+
+.examsBoxContainer a:first-child:hover {
+  background-color: #ff7b00;
+}
+
+.examsBoxContainer h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 9rem;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin-bottom: -1.2rem;
+}
+
+.examsBoxContainer p {
+  font-weight: 400;
+  line-height: 2.1rem;
+  letter-spacing: 0em;
+}
+
+.bigOrangeEllipse {
+  position: absolute;
+  top: 82rem;
+  left: 0;
+}
+
+.littleOrangeEllipse {
+  position: absolute;
+  top: 89rem;
+  right: 5rem;
+}
+
+.services {
+  margin-top: 13rem;
+  margin-bottom: 14rem;
+}
+
+.bigGreenEllipse {
+  position: absolute;
+  top: 114rem;
+  right: 0;
+  width: 10rem;
+}
+
+.services h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 11.5rem;
+}
+
+.servicesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.servicesContainer a {
+  width: 37rem;
+  height: 19.5rem;
+  padding: 5.7rem 2.6rem;
+  border-radius: 1rem;
+  border: 1px solid #484848;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.servicesContainer a:hover {
+  background-color: #fff;
+}
+
+.serviceIconContainer {
+  width: 12.1rem;
+  height: 12.1rem;
+  position: absolute;
+  top: -6.5rem;
+  right: 3.3rem;
+  background-color: #fff;
+}
+
+.serviceIconContainer svg {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.serviceIconContainer svg path {
+  stroke: #484848;
+  stroke-width: 0.7;
+  fill: #fff;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.serviceContent h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 3.6rem;
+}
+
+.serviceContent p {
+  font-weight: 300;
+  line-height: 2.4rem;
+  letter-spacing: 0em;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.topics {
+  margin-bottom: 14rem;
+  margin-top: -1rem;
+}
+
+.topics h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 6.5rem;
+}
+
+.topicsContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.topicContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  height: 20.8rem;
+}
+
+.topicsContainer a {
+  width: 95%;
+  height: 20.8rem;
+  padding: 5.7rem 2.6rem;
+  border-radius: 1rem;
+  border: 1px solid #484848;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.topicsContainer a:hover {
+  background-color: #fff;
+}
+
+.topicIconContainer {
+  width: 35%;
+  height: 8.1rem;
+  padding: 0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topicIconContainer svg {
+  width: 60%;
+  height: 60%;
+}
+
+.topicContent {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  max-height: 100%;
+}
+
+.topicContent h3 {
+  min-width: 12rem;
+  max-width: 100%;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3.3rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.topicContent p {
+  font-weight: 300;
+  line-height: 2.4rem;
+  letter-spacing: 0em;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 100;
+  width: 100%;
+}
+
+.leaders {
+  margin-bottom: 17rem;
+  margin-top: -1rem;
+}
+
+.leaders h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.leadersContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.leaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.leadersContainer a {
+  width: 36.7rem;
+  height: 30.3rem;
+  padding: 5.7rem 2.6rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+  border-top-width: 6.6rem;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.leaderIconContainer {
+  width: 7.1rem;
+  height: 7.1rem;
+  position: absolute;
+  top: -9.3rem;
+  left: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderIconContainer img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.leadersContainer a:hover {
+  background-color: #fff;
+}
+
+.leaderContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: -5.6rem;
+}
+
+.leaderImgContainer {
+  width: 7.7rem;
+  height: 7.7rem;
+}
+
+.leaderImgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.leaderContent h3 {
+  width: 100%;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0em;
+  color: black;
+}
+
+.leaderContent p {
+  font-weight: 600;
+  line-height: 2.2rem;
+  letter-spacing: 0em;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 30.5rem;
+  height: 4.4rem;
+}
+
+.leaderContent span {
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 6rem;
+  letter-spacing: 0em;
+}
+
+.bigBlueEllipse {
+  position: absolute;
+  left: 0;
+  top: 177rem;
+  width: 9rem;
+}
+
+.slider {
+  width: 120rem;
+}
+
+.littleOrangeEllipse2 {
+  position: relative;
+  top: 4rem;
+  left: 32rem;
+}
+
+.packages {
+  margin-bottom: 14rem;
+  margin-top: -1rem;
+}
+
+.packages h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 8.5rem;
+}
+
+.packagesContainer {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.packagesContainer > div {
+  width: 36.7rem;
+  height: 36.7rem;
+  padding: 2rem 2rem 3.5rem;
+  border-radius: 1rem;
+  border: 1px solid #484848;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.packagesContainer > div:hover {
+  background-color: #fff;
+}
+
+.packageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+  margin-top: 1rem;
+  height: 31.4rem;
+}
+
+.packageContent a {
+  position: absolute;
+  bottom: 3.5rem;
+}
+
+.packageContent h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 2.4rem;
+  text-align: center;
+  height: 2.4rem;
+  color: black;
+}
+
+.packageContent .packagePrice {
+  font-size: 5.1rem;
+  font-weight: 600;
+  line-height: 5.2rem;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+}
+
+.packagePriceTime {
+  font-size: 2.1rem;
+}
+
+.packageContent p {
+  font-weight: 300;
+  line-height: 2.4rem;
+  letter-spacing: 0em;
+  width: 31.4rem;
+  height: 9.1rem;
+  overflow: hidden;
+  margin-top: -2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.scrollToTop {
+  background-color: #5f56a5 !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  transition: all 0.3s ease;
+}
+
+.scrollToTop svg {
+  fill: black;
+}
+
+.scrollToTop:hover svg,
+.scrollToTop:focus svg {
+  fill: #fff;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus {
+  background-color: #5f56a5d2 !important;
+}
+
+@media only screen and (max-width: 1214px) {
+  .servicesContainer {
+    gap: 7.5rem;
+  }
+
+  .leadersContainer {
+    gap: 3rem;
+  }
+
+  .serviceIconContainer {
+    width: 11rem;
+    height: 11rem;
+    top: -5.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1162px) {
+  .littleBlueEllipse {
+    bottom: 6.5rem;
+  }
+
+  .bigOrangeEllipse {
+    width: 8rem;
+  }
+
+  .bigGreenEllipse {
+    width: 8rem;
+  }
+
+  .bigBlueEllipse {
+    width: 8rem;
+  }
+
+  .littleOrangeEllipse {
+    width: 4.5rem;
+    right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+
+  .bigOrangeEllipse {
+    width: 7rem;
+  }
+
+  .littleOrangeEllipse {
+    width: 4.5rem;
+    right: 2rem;
+  }
+
+  .examsBoxContainer img {
+    width: 15rem;
+  }
+
+  .bigGreenEllipse {
+    width: 6rem;
+    top: 130rem;
+  }
+
+  .scrollToTop svg {
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .littleBlueEllipse {
+    bottom: 9rem;
+    width: 3rem;
+  }
+
+  .greenEllipse {
+    width: 6rem;
+  }
+
+  .greenEllipse2 {
+    width: 6rem;
+  }
+
+  .bigOrangeEllipse {
+    width: 6rem;
+    top: 74rem;
+  }
+
+  .bigBlueEllipse {
+    width: 4.5rem;
+  }
+
+  .littleOrangeEllipse {
+    width: 4.5rem;
+    right: 1rem;
+    top: 85rem;
+  }
+
+  .scrollToTop svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .topicsContainer a {
+    height: 21.8rem;
+  }
+
+  .topicContent h3 {
+    width: 30rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 43.75%;
+  }
+
+  .littleBlueEllipse {
+    bottom: 10.5rem;
+    width: 3rem;
+  }
+
+  .littleOrangeEllipse2 {
+    width: 5rem;
+  }
+
+  .greenEllipse {
+    width: 6rem;
+    top: 13rem;
+  }
+
+  .contactLeft h1 {
+    font-size: 5rem;
+  }
+
+  .contactLeft p {
+    font-size: 1.6rem;
+  }
+
+  .scrollToTop svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .greenEllipse2 {
+    width: 6rem;
+  }
+
+  .bigOrangeEllipse {
+    width: 6rem;
+    top: 74rem;
+  }
+
+  .littleOrangeEllipse {
+    width: 4.5rem;
+    right: 1rem;
+    top: 85rem;
+  }
+
+  .bigBlueEllipse {
+    width: 4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 37.5%;
+  }
+
+  .contactLeft h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+
+  .contactLeft p {
+    font-size: 1.4rem;
+  }
+
+  .contactLeft {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+
+  .contactRight {
+    width: 100%;
+    height: 56.6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contactRight .bigEllipse {
+    width: 100%;
+    height: 100%;
+  }
+
+  .pupilImg {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -1rem;
+  }
+
+  .greenEllipse {
+    right: 3.8rem;
+    top: 16rem;
+    width: 3rem;
+  }
+
+  .greenEllipse2 {
+    top: 69rem;
+    right: 20rem;
+    width: 3rem;
+  }
+
+  .littleBlueEllipse {
+    display: none;
+  }
+
+  .examsBoxContainer {
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .leadersContainer {
+    gap: 5rem;
+  }
+
+  .packagesContainer {
+    gap: 5rem;
+  }
+
+  .bigGreenEllipse {
+    width: 3rem;
+    top: 127rem;
+  }
+
+  .bigBlueEllipse {
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .topicsContainer a {
+    width: 95%;
+    height: 31.8rem;
+    padding: 5.7rem 2.6rem;
+    margin-left: 0.6rem;
+  }
+
+  .topicContent h3 {
+    width: 30rem;
+    font-size: 3rem;
+  }
+
+  .topicIconContainer {
+    width: 40%;
+  }
+
+  .topicContent {
+    width: 60%;
+  }
+
+  .topicContent p {
+    font-size: 2rem;
+  }
+}

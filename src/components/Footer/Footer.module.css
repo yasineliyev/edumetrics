@@ -1,0 +1,149 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.paragraph {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.company,
+.customer,
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.company h5,
+.customer h5,
+.contact h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.3rem;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.company a,
+.customer a,
+.contact a {
+  text-decoration: none;
+  color: #393939;
+  font-size: 1.4rem;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.company a:hover,
+.customer a:hover,
+.contact a:hover {
+  text-shadow: 0 0 1px #393939;
+}
+
+.socialNetwork {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialNetwork svg {
+  width: 24px;
+  height: 24px;
+}
+
+.socialNetwork svg:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .paragraph {
+    font-size: 1.2rem;
+  }
+
+  .company h5,
+  .customer h5,
+  .contact h5 {
+    font-size: 1.3rem;
+  }
+
+  .company a,
+  .customer a,
+  .contact a {
+    font-size: 1.1rem;
+  }
+
+  .socialNetwork img {
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .paragraph {
+    font-size: 1.2rem;
+    width: 17rem;
+  }
+
+  .company h5,
+  .customer h5,
+  .contact h5 {
+    font-size: 1.3rem;
+  }
+
+  .company a,
+  .customer a,
+  .contact a {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .paragraph {
+    font-size: 1.8rem;
+    width: 100%;
+    order: 1;
+  }
+
+  .company h5,
+  .customer h5,
+  .contact h5 {
+    font-size: 2.3rem;
+    flex: 0 0 100%;
+  }
+
+  .company a,
+  .customer a,
+  .contact a {
+    font-size: 1.8rem;
+    padding-right: 6rem;
+  }
+
+  .company {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .customer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
