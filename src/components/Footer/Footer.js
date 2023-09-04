@@ -1,15 +1,20 @@
 import styles from "./Footer.module.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../api/constants";
 
 const Footer = () => {
+  const params = useParams();
+  const language = params.lang;
+
   const [footerData, setFooterData] = useState({});
 
   useEffect(() => {
     const fetchFooterData = async () => {
       try {
-        const responseFooterData = await fetch(`${BASE_URL}/api/aze`);
+        const responseFooterData = await fetch(
+          `${BASE_URL}/api/${language ? language : "aze"}`
+        );
         const resultFooterData = await responseFooterData.json();
         setFooterData(resultFooterData);
       } catch (error) {
@@ -17,7 +22,7 @@ const Footer = () => {
       }
     };
     fetchFooterData();
-  }, []);
+  }, [language]);
 
   useEffect(() => {
     if (footerData.socials) {
@@ -41,33 +46,43 @@ const Footer = () => {
     }
   }, [footerData]);
 
+  function translate(original) {
+    if (footerData.languages) {
+      for (let i = 0; i < footerData.languages.length; i++) {
+        if (original == footerData.languages[i].o) {
+          return footerData.languages[i].t;
+        }
+      }
+    }
+    return original;
+  }
+
   return (
     <div className={styles.footer}>
       <div className={styles.paragraph}>
-        <p>© 2023 {footerData.companyName} - All rights reserved.</p>
+        <p>
+          © 2023 {footerData.companyName} -{" "}
+          {translate("Bütun hüquqlar qorunur")}.
+        </p>
       </div>
       <div className={styles.company}>
-        <h5>COMPANY</h5>
-        <Link to="">HAQQIMIZDA</Link>
-        <Link to="">FƏNNLƏR</Link>
-        <Link to="">PAKETLƏR</Link>
+        <h5>{translate("ŞİRKƏT")}</h5>
+        <Link to="">{translate("HAQQIMIZDA")}</Link>
+        <Link to="">{translate("FƏNLƏR")}</Link>
+        <Link to="">{translate("PAKETLƏR")}</Link>
       </div>
       <div className={styles.customer}>
-        <h5>FOR CUSTOMER</h5>
-        <Link to="">BLOG</Link>
-        <Link to="">FAQ</Link>
-        <Link to="">CONTACT</Link>
+        <h5>{translate("MÜŞTƏRİLƏR ÜÇÜN")}</h5>
+        <Link to="">{translate("BLOQ")}</Link>
+        <Link to="">{translate("TEZ-TEZ VERİLƏN SUALLAR")}</Link>
+        <Link to="">{translate("ƏLAQƏ")}</Link>
       </div>
       <div className={styles.contact}>
-        <h5>CONTACT</h5>
+        <h5>{translate("ƏLAQƏ")}</h5>
         <Link to={`tel:${footerData.companyPhone}`}>
           {footerData.companyPhone}
         </Link>
-        <Link to="">
-          {`${footerData.companyAddress}`
-            .toLocaleUpperCase()
-            .replaceAll("I", "İ")}
-        </Link>
+        <Link to="">{`${translate(footerData.companyAddress)}`}</Link>
         <Link
           to={`mailto:${
             footerData.companyEmail ? footerData.companyEmail : "INFO@XXXX.COM"

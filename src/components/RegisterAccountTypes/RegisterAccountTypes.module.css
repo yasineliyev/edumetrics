@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 7rem;
-  margin-bottom: 11.5rem;
+  margin-bottom: 14.5rem;
 }
 
 .registerAccountContainer a {
@@ -29,7 +29,11 @@
   gap: 1.5rem;
 }
 
-.registerAccountContainer a:hover {
+.registerAccountContainer a:first-child:hover {
+  color: #4ae49d;
+}
+
+.regsterAccountContainer a:hover {
   background-color: #fff;
 }
 
@@ -50,4 +54,11 @@
   letter-spacing: 0em;
   color: #393939;
   width: 30.8rem;
+}
+
+.bigOrangeEllipse {
+  position: absolute;
+  left: -3rem;
+  width: 7.5rem;
+  top: 51rem;
 }

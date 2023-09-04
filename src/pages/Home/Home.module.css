@@ -126,14 +126,15 @@
   width: 38rem;
   height: 38.2rem;
   padding: 2.8rem;
+  cursor: auto;
 }
 
 .examsBoxContainer a:first-child {
   background-color: #ffa753;
 }
 
-.examsBoxContainer a:first-child:hover {
-  background-color: #ff7b00;
+.examsBoxContainer a:last-child {
+  background-color: #a4d7f2;
 }
 
 .examsBoxContainer h3 {
@@ -202,6 +203,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  cursor: auto;
 }
 
 .servicesContainer a:hover {
@@ -383,6 +385,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  cursor: auto;
 }
 
 .leaderIconContainer {

@@ -4,7 +4,6 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import { BASE_URL } from "./api/constants";
 import NotFound from "./pages/NotFound/NotFound";
-import RegisterAccountTypes from "./components/RegisterAccountTypes/RegisterAccountTypes";
 
 function App() {
   document
@@ -18,7 +17,7 @@ function App() {
           <Route path=":lang" element={<Home />} />
         </Route>
         <Route path="register" element={<Register />}>
-          <Route index element={<RegisterAccountTypes />} />
+          <Route path=":lang" element={<Register />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -93,3 +93,9 @@
   bottom: 0;
   left: 7rem;
 }
+
+.greenEllipse2 {
+  position: absolute;
+  right: 0rem;
+  bottom: -25rem;
+}

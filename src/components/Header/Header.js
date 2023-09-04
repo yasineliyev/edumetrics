@@ -3,16 +3,19 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { FormControl, MenuItem, Select } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { BASE_URL } from "../../api/constants";
 import { Fragment, useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 
-const Header = () => {
+const Header = ({ url }) => {
+  const params = useParams();
+  const language = params.lang;
+
   const [headerData, setHeaderData] = useState({});
-  const [lang, setLang] = useState("AZE");
+  const [lang, setLang] = useState(language ? language.toUpperCase() : "AZE");
 
   const handleChange = (e) => {
     setLang(e.target.value);
@@ -42,29 +45,33 @@ const Header = () => {
       className={styles.menuBox}
     >
       <List>
-        <Link to="/">ANA SƏHİFƏ</Link>
+        <Link to={`${language ? `/${language}` : "/"}`}>
+          {translate("ANA SƏHİFƏ")}
+        </Link>
       </List>
 
       <List>
-        <Link to="/">HAQQIMIZDA</Link>
+        <Link to="/">{translate("HAQQIMIZDA")}</Link>
       </List>
       <List>
-        <Link to="/">FƏNNLƏR</Link>
+        <Link to="/">{translate("FƏNLƏR")}</Link>
       </List>
       <List>
-        <Link to="/">PAKETLƏR</Link>
+        <Link to="/">{translate("PAKETLƏR")}</Link>
       </List>
       <List>
-        <Link to="/register">QEYDİYYAT</Link>
+        <Link to={`${language ? `/register/${language}` : "/register"}`}>
+          {translate("QEYDİYYAT")}
+        </Link>
       </List>
       <List>
-        <Link to="/">BLOG</Link>
+        <Link to="/">{translate("BLOQ")}</Link>
       </List>
       <List>
-        <Link to="/">FAQ</Link>
+        <Link to="/">{translate("TEZ-TEZ VERİLƏN SUALLAR")}</Link>
       </List>
       <List>
-        <Link to="/">CONTACT</Link>
+        <Link to="/">{translate("ƏLAQƏ")}</Link>
       </List>
     </Box>
   );
@@ -72,7 +79,9 @@ const Header = () => {
   useEffect(() => {
     const fetchHeaderData = async () => {
       try {
-        const responseHeaderData = await fetch(`${BASE_URL}/api/aze`);
+        const responseHeaderData = await fetch(
+          `${BASE_URL}/api/${language ? language : "aze"}`
+        );
         const resultHeaderData = await responseHeaderData.json();
 
         setHeaderData(resultHeaderData);
@@ -81,7 +90,18 @@ const Header = () => {
       }
     };
     fetchHeaderData();
-  }, []);
+  }, [language]);
+
+  function translate(original) {
+    if (headerData.languages) {
+      for (let i = 0; i < headerData.languages.length; i++) {
+        if (original == headerData.languages[i].o) {
+          return headerData.languages[i].t;
+        }
+      }
+    }
+    return original;
+  }
 
   return (
     <>
@@ -110,7 +130,7 @@ const Header = () => {
           </Fragment>
         ))}
 
-        <Link to="/">
+        <Link to={`${language ? `/${language}` : "/"}`}>
           <img
             className={styles.logo}
             src={`${BASE_URL}/api/logo`}
@@ -124,21 +144,21 @@ const Header = () => {
             onChange={handleChange}
           >
             {headerData.languageList &&
-              headerData.languageList.map((language, index) => {
+              headerData.languageList.map((languageItem, index) => {
                 return (
                   <MenuItem
                     key={index}
                     className={`langItem ${styles.menuItem}`}
-                    value={language}
+                    value={languageItem}
                   >
                     <Link
                       to={
-                        language === "AZE"
-                          ? window.location.href
-                          : `${window.location.href}${language.toLowerCase()}`
+                        languageItem === "AZE"
+                          ? `/${url ? url : ""}`
+                          : `${languageItem.toLocaleLowerCase()}`
                       }
                     >
-                      {language}
+                      {languageItem}
                     </Link>
                   </MenuItem>
                 );
